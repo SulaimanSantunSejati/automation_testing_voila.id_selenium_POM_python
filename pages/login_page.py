@@ -19,7 +19,7 @@ class LoginPage:
         self.sign_in_text = (By.CSS_SELECTOR, "[data-test-id='CT-SignIn-Btn']")
         self.register_text = (By.CSS_SELECTOR, "[data-test-id='CT-Register-Btn']")
         self.unregist_text = (By.CSS_SELECTOR, "._15kd2weog._17zx15t9c._17zx15t6p._17zx15tgg._17zx15thd._17zx15te8._17zx15t4g#base") #masih salah
-        self.invalid_pass_text = (By.CSS_SELECTOR, "._15r4f4d15e#base") 
+        self.invalid_pass_text = (By.CSS_SELECTOR, "._7q2fqh7#base") 
         self.empty_email_text = (By.CSS_SELECTOR, "p._15kd2wejk._1ccbe2wc#base") 
         self.forgot_password_button1 = (By.CSS_SELECTOR, 'p._5y0pl50._5y0pl5e._5y0pl5a#base')
         self.forgot_password_button2 = (By.CSS_SELECTOR, "button._920fuu5._920fuug._920fuub._920fuu6[data-test-id='CT_Component_UpdatePassword_Submit']")
@@ -46,8 +46,8 @@ class LoginPage:
 
     def login(self, username, password):
         self.driver.get(self.url_login)
-        self.driver.maximize_window()
         #self.click_dont_allow()
+        self.driver.maximize_window()
         self.set_username(username)
         self.set_password(password)
         self.click_login()

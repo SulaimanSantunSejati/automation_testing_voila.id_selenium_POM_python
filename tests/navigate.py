@@ -19,7 +19,7 @@ class TestNavigate():
         self.navigate_page.scroll_to_position(5300)
         self.navigate_page.click_tokopedia_button_navigate()
         time.sleep(5)
-        self.driver.switch_to.window(self.driver.window_handles[-1])
+        self.driver.switch_to.window(self.driver.window_handles[1])
         expected_url = "https://www.tokopedia.com/voilaid"
         actual_url = self.driver.current_url 
         assert expected_url == actual_url, f"Expected URL: {expected_url}, but got: {actual_url}"
@@ -28,7 +28,7 @@ class TestNavigate():
         self.login_page.unlogin()
         self.navigate_page.scroll_to_position(5300)
         self.navigate_page.click_shopee_button_navigate()
-        self.driver.switch_to.window(self.driver.window_handles[-1])
+        self.driver.switch_to.window(self.driver.window_handles[1])
         expected_url = "https://shopee.co.id/voila.id_officialshop"
         actual_url = self.driver.current_url 
         assert expected_url == actual_url, f"Expected URL: {expected_url}, but got: {actual_url}"
@@ -38,7 +38,7 @@ class TestNavigate():
         self.navigate_page.scroll_to_position(5300)
         self.navigate_page.click_blibli_button_navigate()
         time.sleep(5)
-        self.driver.switch_to.window(self.driver.window_handles[-1])
+        self.driver.switch_to.window(self.driver.window_handles[1])
         expected_url = "https://www.blibli.com/challenge/landing/?redirect=%2Fmerchant%2Fvoila-id%2FVOI-70003%3Fpage%3D1%26start%3D0%26pickupPointCode%3DPP-3176345%26cnc%3D%26multiCategory%3Dtrue%26excludeProductList%3Dtrue%26promoTab%3Dfalse%26sort%3D7"
         actual_url = self.driver.current_url 
         assert expected_url == actual_url, f"Expected URL: {expected_url}, but got: {actual_url}"
@@ -48,7 +48,7 @@ class TestNavigate():
         self.navigate_page.scroll_to_position(5300)
         self.navigate_page.click_tiktok_button_navigate()
         time.sleep(5)
-        self.driver.switch_to.window(self.driver.window_handles[-1])
+        self.driver.switch_to.window(self.driver.window_handles[1])
         expected_url = "https://www.tiktok.com/@voila.id?lang=en"
         actual_url = self.driver.current_url 
         assert expected_url == actual_url, f"Expected URL: {expected_url}, but got: {actual_url}"
@@ -58,12 +58,12 @@ class TestNavigate():
         self.navigate_page.scroll_to_position(5300)
         self.navigate_page.click_zalora_button_navigate()
         time.sleep(5)
-        self.driver.switch_to.window(self.driver.window_handles[-1])
+        self.driver.switch_to.window(self.driver.window_handles[1])
         expected_url = "https://www.zalora.co.id/store/voila-id"
         actual_url = self.driver.current_url 
         assert expected_url == actual_url, f"Expected URL: {expected_url}, but got: {actual_url}"
         
-    #About Us
+    # About Us
 
     def test_navigate_about_page(self):
         self.login_page.unlogin()
@@ -96,7 +96,7 @@ class TestNavigate():
         self.login_page.unlogin()
         self.navigate_page.scroll_to_position(5300)
         self.navigate_page.click_promotions_button_navigate()
-        time.sleep(7)
+        time.sleep(5)
         expected_part = "/promotions/"
         actual_url = self.driver.current_url
         assert expected_part in actual_url, f"Expected URL to contain '{expected_part}', but got: {actual_url}"
@@ -137,7 +137,7 @@ class TestNavigate():
         actual_url = self.driver.current_url 
         assert expected_url == actual_url, f"Expected URL: {expected_url}, but got: {actual_url}"
 
-#Customer Service
+# Customer Service
 
     def test_navigate_contact_us_page(self):
         self.login_page.unlogin()
@@ -186,7 +186,7 @@ class TestNavigate():
         self.navigate_page.scroll_to_position(6000)
         self.navigate_page.click_instagram_voila_button_navigate()
         time.sleep(5)
-        self.driver.switch_to.window(self.driver.window_handles[-1])
+        self.driver.switch_to.window(self.driver.window_handles[1])
         expected_url = "https://www.instagram.com/voila.id/"
         actual_url = self.driver.current_url 
         assert expected_url == actual_url, f"Expected URL: {expected_url}, but got: {actual_url}"
@@ -196,7 +196,7 @@ class TestNavigate():
         self.navigate_page.scroll_to_position(6000)
         self.navigate_page.click_tiktok_voila_button_navigate()
         time.sleep(5)
-        self.driver.switch_to.window(self.driver.window_handles[-1])    
+        self.driver.switch_to.window(self.driver.window_handles[1])    
         expected_url = "https://www.tiktok.com/@voila.id?lang=en"
         actual_url = self.driver.current_url 
         assert expected_url == actual_url, f"Expected URL: {expected_url}, but got: {actual_url}"
@@ -205,7 +205,7 @@ class TestNavigate():
         self.login_page.unlogin()
         self.navigate_page.scroll_to_position(6000)
         self.navigate_page.click_youtube_voila_button_navigate()
-        self.driver.switch_to.window(self.driver.window_handles[-1])
+        self.driver.switch_to.window(self.driver.window_handles[1])
         expected_url = "https://www.youtube.com/channel/UCYkAZ9ERvRASlKhIqrGpeQA"
         actual_url = self.driver.current_url 
         assert expected_url == actual_url, f"Expected URL: {expected_url}, but got: {actual_url}"
@@ -215,7 +215,7 @@ class TestNavigate():
         self.navigate_page.scroll_to_position(6000)
         self.navigate_page.click_facebook_voila_button_navigate()
         time.sleep(5)
-        self.driver.switch_to.window(self.driver.window_handles[-1])
+        self.driver.switch_to.window(self.driver.window_handles[1])
         expected_url = "https://www.facebook.com/voilalux"
         actual_url = self.driver.current_url 
         assert expected_url == actual_url, f"Expected URL: {expected_url}, but got: {actual_url}"
@@ -228,7 +228,7 @@ class TestNavigate():
         time.sleep(5)
         self.navigate_page.click_google_play_store_button_navigate()
         time.sleep(5)
-        self.driver.switch_to.window(self.driver.window_handles[-1])
+        self.driver.switch_to.window(self.driver.window_handles[1])
         expected_url = "https://play.google.com/store/apps/details?id=com.voila.id&pli=1"
         actual_url = self.driver.current_url 
         assert expected_url == actual_url, f"Expected URL: {expected_url}, but got: {actual_url}"
@@ -239,7 +239,7 @@ class TestNavigate():
         time.sleep(5)
         self.navigate_page.click_apple_store_button_navigate()
         time.sleep(5)
-        self.driver.switch_to.window(self.driver.window_handles[-1])
+        self.driver.switch_to.window(self.driver.window_handles[1])
         expected_url = "https://apps.apple.com/id/app/voil%C3%A0-id/id1560619001?l=id"
         actual_url = self.driver.current_url 
         assert expected_url == actual_url, f"Expected URL: {expected_url}, but got: {actual_url}"

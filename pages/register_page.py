@@ -19,7 +19,6 @@ class RegisterPage:
         self.driver.maximize_window() 
         #self.click_dont_allow()
 
-
     def click_register_button(self):
         WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable(self.register_button)).click()
     

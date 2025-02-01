@@ -35,7 +35,7 @@ class TestWishlist():
         assert self.wishlist_page.get_wishlist_text() == ("Wishlist")
         assert self.wishlist_page.get_item_on_wishlist() == ("Bon Bon 32 - RH32-13 Ceramic Playful Multicolor Dial Pink Rubber Strap")
 
-    def test_remove_wishlist_product(self):
+    def test_remove_wishlist_product_valid(self):
         self.login_page.login("fihokob723@aqqor.com", "Tonoyoga999")
         time.sleep(5)
         self.wishlist_page.click_heart_wishlist_button()
@@ -48,13 +48,12 @@ class TestWishlist():
         self.wishlist_page.click_confirm_remove_button()
         assert self.wishlist_page.get_wishlist_empty_text() == ("Your wishlist is empty")
 
-
     def test_click_wishlist_button_without_login_invalid(self):
         self.login_page.unlogin()
         self.wishlist_page.click_heart_wishlist_button()
         assert self.login_page.get_sign_in_to_shop_text() == ("Sign in to shop with vouchers, track your order, and save your favorite products.")
         
-    def test_wishlist_after_logout(self):
+    def test_wishlist_after_logout_valid(self):
         self.login_page.login("fihokob723@aqqor.com", "Tonoyoga999")
         self.search_page.click_search()
         self.search_page.search_for_item("Bon Bon 32 - RH32-13 Ceramic Playful Multicolor Dial Pink Rubber Strap")

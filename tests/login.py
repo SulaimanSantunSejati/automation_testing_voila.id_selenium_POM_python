@@ -14,7 +14,6 @@ class TestLogin():
     def test_login_success(self):
         self.login_page.login("fihokob723@aqqor.com", "Tonoyoga999")
         time.sleep(5)
-        print(f"Text found: {self.login_page.get_greeting_text()}")
         assert self.login_page.get_greeting_text() == "Hi, Tono!"
 
     def test_login_logout_success(self):
@@ -59,5 +58,4 @@ class TestLogin():
         self.login_page.set_username("fihokob723@aqqor.com")
         self.login_page.click_forgot_password2()
         time.sleep(5)
-        print(f"Text found: {self.login_page.get_forgot_password_text()}")
-        assert self.login_page.get_forgot_password_text() == "Enter the verification code we sent to your registered email."
+        assert self.login_page.get_forgot_password_text() == "Enter the verification code we sent to your registered email."  

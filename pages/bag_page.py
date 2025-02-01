@@ -14,11 +14,6 @@ class BagPage:
         self.remove_from_cart_button = (By.CSS_SELECTOR,"[data-test-id='CT_Component_removeSelectedCart']")
         self.confirm_to_remove_button = (By.CSS_SELECTOR,"[data-test-id='CT_Component_ConfirmContent_Ok']")
         self.shopping_bag_is_empty_text = (By.CSS_SELECTOR, "p._17zx15te8._17zx15t7k._17zx15tgg#base")
-        self.uncheck_button = (By.CSS_SELECTOR, "[data-test-id='CT_Component_CartItemCheckbox']")
-        self.increase_product = (By.CSS_SELECTOR, "[data-test-id='CT_Container_NumberStepper_Increase0']")
-        self.product_price = (By.CSS_SELECTOR, "p._15kd2we74._17zx15te8._17zx15tgg._17zx15t9s._17zx15t9d#base")
-        self.total_price = (By.CSS_SELECTOR, "p._15kd2we74._17zx15tgg._17zx15t9s._17zx15te8#base")
-
 #Step Method
 
     def click_bag_button (self):
@@ -45,19 +40,6 @@ class BagPage:
     def get_shopping_bag_is_empty_text(self):
         return WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(self.shopping_bag_is_empty_text)).text
     
-    def click_checkbox_button(self):
-        WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(self.uncheck_button)).click()
-
-    def click_increase_product(self):
-        WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(self.increase_product)).click()
-
-    def get_product_price(self):
-        return WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(self.product_price)).text
-
-    def get_total_price(self):
-        return WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(self.total_price)).text
-    
-
     #Combined Step
     def add_to_bag_product(self):
         time.sleep(3)

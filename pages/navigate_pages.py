@@ -41,7 +41,6 @@ class NavigatePage:
         #self.google_playstore_button = (By.CSS_SELECTOR, '.vds-container > #base > #base > #base > .rdkhex8:nth-child(1) img')
         #self.apple_store_button = (By.CSS_SELECTOR, '.vds-container > #base > #base > #base > .rdkhex8:nth-child(2) img')
 
-    def get_current_url(self): return self.driver.current_url
 
     def scroll_to_position(self, y_position): self.driver.execute_script(f"window.scrollTo(0, {y_position});")
 
