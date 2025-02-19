@@ -20,7 +20,6 @@ class TestSubscribe():
     def test_subscribed_email_valid(self):
         self.login_page.unlogin()
         self.subscribe_page.set_subscribe("test@gmail.com")
-        print(f"Text found: {self.subscribe_page.get_email_already_subscribed_text()}")
         assert self.subscribe_page.get_email_already_subscribed_text() == ("This email address is already subscribed, please try a different one.")
     
     def test_subscribe_invalid(self):

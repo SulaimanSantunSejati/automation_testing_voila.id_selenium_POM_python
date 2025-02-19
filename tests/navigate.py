@@ -19,10 +19,10 @@ class TestNavigate():
         self.navigate_page.scroll_to_position(5300)
         self.navigate_page.click_tokopedia_button_navigate()
         time.sleep(5)
-        self.driver.switch_to.window(self.driver.window_handles[1])
-        expected_url = "https://www.tokopedia.com/voilaid"
+        self.driver.switch_to.window(self.driver.window_handles[1])# Pindah ke tab kedua
+        expected_url = "https://www.tokopedia.com/voilaid" # Cek URL
         actual_url = self.driver.current_url 
-        assert expected_url == actual_url, f"Expected URL: {expected_url}, but got: {actual_url}"
+        assert expected_url == actual_url, f"Expected URL: {expected_url}, but got: {actual_url}"# mastiin URL sesuai
 
     def test_navigate_to_shopee_link(self):
         self.login_page.unlogin()

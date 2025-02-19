@@ -9,6 +9,7 @@ class LoginPage:
         self.url_login = "https://voila.id/account/login"
         self.url_unlogin = "https://voila.id/"
         self.username_input = (By.NAME, "identifier")
+        #self.username_input = (By.XPATH, "//div[@class='yihd6a0 ldkv8w0']//input[@name='identifier']")
         self.password_input = (By.NAME, "password")
         self.login_button = (By.CSS_SELECTOR, "[data-test-id='CT_component_login_submit']")
         self.logins_button = (By.CSS_SELECTOR, "[data-test-id='CT_component_login_submit']")

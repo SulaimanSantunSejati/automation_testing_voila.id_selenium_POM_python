@@ -41,3 +41,18 @@ class TestSearch():
         self.bag_page.click_bag_button()
         self.bag_page.remove_product_from_bag()
         assert self.bag_page.get_shopping_bag_is_empty_text() == ("Your shopping bag is empty")
+
+    def test_add_product_to_bag_and_verify_after_logout_and_login(self):
+        self.login_page.login("fihokob723@aqqor.com", "Tonoyoga999")
+        self.search_page.search("Rockstud Strappy Sandal Flats Light Ivory Ghw")
+        self.bag_page.add_to_bag_product()
+        self.bag_page.click_bag_button()
+        time.sleep(3)
+        self.login_page.click_profile_button()
+        self.login_page.click_sign_out1()
+        self.login_page.click_sign_out2()
+        time.sleep(5)
+        self.login_page.login("fihokob723@aqqor.com", "Tonoyoga999")
+        self.bag_page.click_bag_button()
+        assert self.bag_page.get_shopping_bag_text() == ("Shopping Bag")
+        assert self.bag_page.get_valentino_text() == ("Rockstud Strappy Sandal Flats Light Ivory Ghw")

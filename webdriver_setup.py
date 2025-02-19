@@ -15,3 +15,6 @@ def setup_webdriver():
 
     driver = webdriver.Chrome(service=service, options=options)
     return driver
+
+
+

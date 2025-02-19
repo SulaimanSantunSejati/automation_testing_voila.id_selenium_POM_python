@@ -55,8 +55,7 @@ class TestWishlist():
         
     def test_wishlist_after_logout_valid(self):
         self.login_page.login("fihokob723@aqqor.com", "Tonoyoga999")
-        self.search_page.click_search()
-        self.search_page.search_for_item("Bon Bon 32 - RH32-13 Ceramic Playful Multicolor Dial Pink Rubber Strap")
+        self.search_page.search("Bon Bon 32 - RH32-13 Ceramic Playful Multicolor Dial Pink Rubber Strap")
         time.sleep(5)
         self.wishlist_page.click_product_button()
         self.wishlist_page.click_wishlist_button()

@@ -21,6 +21,7 @@ class TestLogin():
         self.login_page.click_profile_button()
         self.login_page.click_sign_out1()
         self.login_page.click_sign_out2()
+        time.sleep(3)
         assert self.login_page.get_sign_in_text() == "Sign In"
         assert self.login_page.get_register_text() == "Register"  
 

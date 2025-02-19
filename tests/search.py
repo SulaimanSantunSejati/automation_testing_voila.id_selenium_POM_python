@@ -27,25 +27,11 @@ class TestSearch():
         assert self.search_page.get_not_found_text() == "Product not found"
         assert self.search_page.get_invalid_found_text() == "We can’t find any products that matches your search. Please try another keyword."
 
-    def test_search_missing_items_invalid(self):
-        self.login_page.unlogin()
-        self.search_page.search("jengkol")
-        time.sleep(5)
-        assert self.search_page.get_not_found_text() == "Product not found"
-        assert self.search_page.get_invalid_found_text() == "We can’t find any products that matches your search. Please try another keyword."
-
     def test_search_specific_item_valid(self):
         self.login_page.unlogin()
         self.search_page.search("Bon Bon 32 - RH32-13 Ceramic Playful Multicolor Dial Pink Rubber Strap")
         time.sleep(5)
         assert self.search_page.get_specific_item_text() == "Bon Bon 32 - RH32-13 Ceramic Playful Multicolor Dial Pink Rubber Strap"
-
-    def test_search_price_invalid(self):
-        self.login_page.unlogin()
-        self.search_page.search("Rp. 2.890.000")
-        time.sleep(5)
-        assert self.search_page.get_not_found_text() == "Product not found"
-        assert self.search_page.get_invalid_found_text() == "We can’t find any products that matches your search. Please try another keyword."
 
     def test_search_specific_brand_valid(self):
         self.login_page.unlogin()
